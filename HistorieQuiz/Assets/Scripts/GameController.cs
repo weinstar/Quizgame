@@ -8,22 +8,26 @@ using UnityEngine.SceneManagement;
 public class GameController : MonoBehaviour {
 
     public SimpleObjectPool answerButtonObjectPool;
-    public Transform answerBottonParent;
-
+   
     public Text questionText;
     public Text scoreDisplayText;
     public Text timeRemainingDisplayText;
+    public Transform answerBottonParent;
 
     public GameObject questionDisplay;
-    public GameObject RoundEndDisplay;
-
+    public GameObject roundEndDisplay;
+    public Text highScoreDisplay;
+    
     private DataController dataController;
     private RoundData currentRoundData;
     private QuestionData[] questionPool;
+
+
+
     private bool isRoundActive;
-    private float timeRemaining;
-    private int questionIndex;
+    private float timeRemaining;    
     private int playerScore;
+    private int questionIndex;
     private List<GameObject> answerButtonGameObjects = new List<GameObject>(); 
 
 
@@ -44,6 +48,8 @@ public class GameController : MonoBehaviour {
         ShowQuestion();
 
         UpdateTimeRemainingDiplay();
+
+        highScoreDisplay.text = dataController.GetHighestScore().ToString();
 
 
     }
@@ -108,7 +114,13 @@ public class GameController : MonoBehaviour {
     {
         isRoundActive = false;
         questionDisplay.SetActive(false);
-        RoundEndDisplay.SetActive(true);
+        roundEndDisplay.SetActive(true);
+
+        dataController.SubmitNewPlayerScore(playerScore);
+        highScoreDisplay.text = dataController.GetHighestScore().ToString();
+
+
+
 
     }
 
@@ -149,7 +161,6 @@ public class GameController : MonoBehaviour {
             if(timeRemaining <= 0f)
             {
                 EndRound();
-
             }
 
         }

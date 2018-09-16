@@ -3,6 +3,8 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2015
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HistorieQuiz", "HistorieQuiz.csproj", "{F856B73C-AF5F-9C4F-8A8A-0F1EAC172165}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HistorieQuiz.Editor", "HistorieQuiz.Editor.csproj", "{007774A6-8BAE-941E-0D3F-6A30CB94A640}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -13,6 +15,10 @@ Global
 		{F856B73C-AF5F-9C4F-8A8A-0F1EAC172165}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F856B73C-AF5F-9C4F-8A8A-0F1EAC172165}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F856B73C-AF5F-9C4F-8A8A-0F1EAC172165}.Release|Any CPU.Build.0 = Release|Any CPU
+		{007774A6-8BAE-941E-0D3F-6A30CB94A640}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{007774A6-8BAE-941E-0D3F-6A30CB94A640}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{007774A6-8BAE-941E-0D3F-6A30CB94A640}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{007774A6-8BAE-941E-0D3F-6A30CB94A640}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
