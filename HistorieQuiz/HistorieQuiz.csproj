@@ -237,9 +237,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\AnswerClick.cs" />
-    <Compile Include="Assets\GameController.cs" />
-    <Compile Include="Assets\Question.cs" />
+    <Compile Include="Assets\Scripts\AnswerButton.cs" />
+    <Compile Include="Assets\Scripts\AnswerData.cs" />
+    <Compile Include="Assets\Scripts\DataController.cs" />
+    <Compile Include="Assets\Scripts\GameController.cs" />
+    <Compile Include="Assets\Scripts\MenuScreenController.cs" />
+    <Compile Include="Assets\Scripts\QuestionData.cs" />
+    <Compile Include="Assets\Scripts\RoundData.cs" />
+    <Compile Include="Assets\Scripts\SimpleObjectPool.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />
